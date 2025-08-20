@@ -10,3 +10,18 @@
 ```
 CUDA_VISIBLE_DEVICES=1 python train.py --batch_size 4 --num_workers 16 --data_config_file ./data_config/semantic-kitti.yaml --data_dir /nfs/wattrel/data/md0/datasets/kitti --save_dir ./test
 ```
+
+## How to install
+1. create virtual environment using conda (python=3.10)
+2. install `sparsehash` package
+```
+conda install bioconda::sparsehash
+```
+3. install lightning - lightning is not needed, but will install other dependencies
+```
+pip install lightning==2.5.3
+```
+4. install torchsparse
+```
+pip install git+https://github.com/mit-han-lab/torchsparse.git
+```
